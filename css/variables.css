@@ -1,0 +1,16 @@
+:root{
+  --color-primary: #030303;
+  --color-secondary: #e3e3e3;
+  --color-accent: #dcd40d;
+  --color-error: #ff0000;
+  --opacity-bg: #03030380;
+
+  --font-title-sm: 40px;
+  --font-title-big: 52px;
+  --font-subtitle-sm: 24px;
+  --font-subtitle-big: 32px;
+  --font-body-sm: 16px;
+  --font-body-big: 24px;
+
+  --font-family: 'Montserrat', sans-serif;
+}

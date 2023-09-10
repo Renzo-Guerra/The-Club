@@ -1,0 +1,1 @@
+Little page created from scratch
