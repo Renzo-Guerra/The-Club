@@ -10,6 +10,49 @@
   <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
+  <div class="formContainer hidden" id="form-screen">
+    <form id="formulario_get_info" class="form" method="post">
+      <button class="closeButton" id="closeForm"><i class="fa-regular fa-circle-xmark"></i></button>
+      <div class="input">
+        <label for="mail">Mail</label>
+        <input type="email" id="mail" name="mail">
+        <p class="error" id="email-incorrect">Invalid mail!</p>
+      </div> 
+      <div>
+        <p>What are you interested in?</p>
+        <div class="inputs-container">
+          <div class="input">
+            <label class="label" for="crossfit">
+              <img src="/assets/images/crossfit.jpg" alt="woman doing crossfit">
+              <p>Crossfit</p>
+            </label>
+            <input type="checkbox" name="crossfit" id="crossfit" value="crossfit">
+          </div>
+          <div class="input">
+            <label class="label" for="calisthenics">
+              <img src="/assets/images/calisthenics.jpg" alt="men doing calisthenics">
+              <p>Calisthenics</p>
+            </label>
+            <input type="checkbox" name="calisthenics" id="calisthenics" value="calisthenics">
+          </div>
+          <div class="input">
+            <label class="label" for="powerlifting">
+              <img src="/assets/images/powerlifting.jpg" alt="men doing powerlifting">
+              <p>Powerlifting</p>
+            </label>
+            <input type="checkbox" name="powerlifting" id="powerlifting" value="powerlifting">
+          </div>
+        </div>
+        <p class="error" id="check-invalid">You must at least select 1 option!</p>
+      </div>
+      <div>
+        <input type="checkbox" name="terms" id="terms">
+        <label for="terms">Keep me updated on events and offers</label>
+      </div>
+      <button class="button" type="submit">Get details</button>
+      <p class="success" id="mail-sent">Mail sended successfully!</p>
+    </form>
+  </div>
   <section class="section section1">
     <header class="header">
       <a class="a" href="/index.html">
@@ -19,7 +62,7 @@
     </header>
     <h2 class="h1">Lift your spirit in <span class="span">The Club</span></h2>
     <p class="p">When you commit to regular physical activity, you're not only building strength and endurance but also resilience, discipline, and mental clarity.</p>
-    <button class="button">Enroll now</button>
+    <button class="button" id="callToAction">Enroll now</button>
   </section>
   <section class="section section2">
     <div>
@@ -75,5 +118,6 @@
     </div>
   </footer>
   <script src="https://kit.fontawesome.com/4bf4a5a1f5.js" crossorigin="anonymous"></script>
+  <script src="/js/app.js"></script>
 </body>
 </html>

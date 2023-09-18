@@ -18,6 +18,103 @@ body{
   font-size: var(--font-body-sm);
 }
 
+/* Form styles */
+.formContainer{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  /* background-color: red; */
+  color: var(--color-primary);
+  background-color: var(--opacity-bg);
+  z-index: 1000;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.form{
+  color: var(--color-secondary);
+  position: relative;
+  background-color: var(--color-primary);
+  padding: 6rem 1rem 2rem 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.hidden{
+  display: none;
+}
+.form i{
+  color: var(--color-secondary);
+}
+
+.form .closeButton{
+  position: absolute;
+  margin: 1rem;
+  height: auto;
+  right: 0;
+  top: 0;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  transition: color 200ms linear;
+}
+
+.form .closeButton:hover{
+  cursor: pointer;
+}
+.form .closeButton:hover i{
+  color: var(--color-accent);
+}
+
+
+.form .input{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.form .input input{
+  width: 100%;
+}
+
+.form .input input[type="checkbox"]{
+  display: none;
+}
+
+.input img{
+  object-fit: cover;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.selected img{
+  border: solid .3rem var(--color-accent);
+}
+
+.success{
+  color: var(--color-success);
+  display: none;
+}
+
+.error{
+  color: var(--color-error);
+  display: none;
+}
+.display{
+  display: block;
+}
+
+.inputs-container{
+  display: flex;
+  gap: 1rem;
+  padding-block: .5rem;
+  text-align: center;
+}
+
+
 
 .section{
   position: relative;
@@ -51,18 +148,22 @@ body{
   color: var(--color-accent);
 }
 
-.section1 .button{
+.section1 .button, .form .button{
   margin-top: 2rem;
   padding: .6rem 1rem;
   background-color: var(--color-accent);
-  color: var(--color-secondary);
   border: solid 3px var(--color-primary);
   font-size: var(--font-body-sm);
   color: var(--color-primary);
   font-weight: 600;
   transition: background 200ms ease-in; 
 }
-.section1 .button:hover{
+
+.form .button{
+  width: fit-content;
+  align-self: center;
+}
+.section1 .button:hover, .form .button:hover{
   background-color: var(--color-secondary);
   cursor: pointer;
 }
